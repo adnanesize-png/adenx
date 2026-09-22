@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>À propos — AdenX</title>
+<meta name="description" content="Vision et méthode AdenX.">
+<style>
+
+
+:root{--navy:#061426;--navy2:#0a213c;--blue:#1677ff;--cyan:#4bc2ff;--white:#fff;--paper:#f5f8fc;--ink:#0b1b31;--muted:#66788e;--line:rgba(255,255,255,.12);--max:1180px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--navy);color:#fff;line-height:1.65;overflow-x:hidden}
+a{text-decoration:none;color:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.nav{position:sticky;top:0;z-index:99;background:rgba(6,20,38,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.navin{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-size:28px;font-weight:900;letter-spacing:-2px}.logo span{color:var(--blue)}
+.links{display:flex;align-items:center;gap:21px}.links a{font-size:14px;color:#c5d2e1}.links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid rgba(75,194,255,.55);border-radius:11px;font-weight:700;transition:.25s}
+.btn:hover{transform:translateY(-2px)}.btn.primary{background:linear-gradient(135deg,var(--blue),var(--cyan));border:0;color:#fff;box-shadow:0 12px 35px rgba(22,119,255,.25)}
+.menu{display:none;border:0;background:none;color:#fff;font-size:25px}
+.hero{min-height:calc(100vh - 76px);display:flex;align-items:center;background:radial-gradient(circle at 80% 30%,rgba(22,119,255,.28),transparent 30%),linear-gradient(135deg,#061426,#071a30)}
+.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:65px;align-items:center;padding:90px 0}
+.kicker{text-transform:uppercase;letter-spacing:3px;color:#63c8ff;font-size:12px;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(48px,7vw,92px);line-height:.95;letter-spacing:-5px}h1 span{color:#52baff}
+.lead{font-size:18px;color:#b7c6d8;max-width:660px;margin:28px 0 34px}.actions{display:flex;gap:14px;flex-wrap:wrap}
+.demo{padding:25px;border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.055);box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.screen{aspect-ratio:4/3;padding:28px;border-radius:18px;background:linear-gradient(145deg,#0c3b6c,#071422);display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(75,194,255,.25)}
+.screenLogo{font-size:34px;font-weight:900}.screenLogo span{color:#48b9ff}.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mini div{height:70px;border-radius:11px;background:rgba(255,255,255,.08);border:1px solid var(--line)}
+section{padding:105px 0}.light{background:var(--paper);color:var(--ink)}.dark{background:var(--navy);color:#fff}
+.head{max-width:760px;margin-bottom:50px}.head h2{font-size:clamp(32px,4vw,54px);line-height:1.08;letter-spacing:-2px;margin:10px 0 16px}.head p{color:var(--muted)}.dark .head p{color:#a8b8cb}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:#fff;border:1px solid #dce4ed;border-radius:19px;padding:29px}.dark .card{background:rgba(255,255,255,.045);border-color:var(--line)}
+.icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:#eaf3ff;color:#1478ef;font-weight:900;margin-bottom:20px}
+.card h3{font-size:19px;margin-bottom:8px}.card p{font-size:15px;color:#687b91}.dark .card p{color:#aab9ca}
+.method{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:22px;overflow:hidden}.step{padding:38px}.step+.step{border-left:1px solid var(--line)}.num{color:#53bdff;font-size:12px;letter-spacing:2px;font-weight:900;margin-bottom:14px}.step p{color:#aab9ca}
+.case{min-height:300px;border-radius:22px;padding:30px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,rgba(4,15,29,.05),rgba(4,15,29,.95)),linear-gradient(135deg,#1766ad,#071829);color:#fff}.case small{color:#60c6ff;text-transform:uppercase;letter-spacing:2px}.case h3{font-size:28px;margin:7px 0}.case p{color:#bdcada}
+.cta{padding:55px;border-radius:26px;background:linear-gradient(135deg,#0b2e57,#0c70e6);display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{font-size:clamp(31px,4vw,51px);line-height:1.05;max-width:700px}
+.form{display:grid;gap:14px}.form input,.form select,.form textarea{width:100%;padding:15px;border:1px solid #d8e1eb;border-radius:10px;font:inherit;background:#fff;color:#15243a}.form textarea{min-height:130px;resize:vertical}
+footer{padding:65px 0 30px;background:#040e1b;border-top:1px solid var(--line)}.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}.foot p,.foot a{color:#91a5bb}.foot a{display:block;margin:7px 0}.copy{border-top:1px solid var(--line);padding-top:20px;margin-top:40px;color:#70859b;font-size:13px}
+[id]{scroll-margin-top:76px}
+@media(max-width:850px){.links{display:none}.links.open{display:flex;position:absolute;top:76px;left:0;right:0;padding:25px;background:#061426;flex-direction:column}.menu{display:block}.heroGrid,.grid3,.grid2,.foot{grid-template-columns:1fr}.heroGrid{gap:35px}.method{grid-template-columns:1fr}.step+.step{border-left:0;border-top:1px solid var(--line)}.cta{padding:36px 26px;align-items:flex-start;flex-direction:column}section{padding:75px 0}h1{letter-spacing:-3px}}
+
+
+.pageHero{padding:115px 0 85px;background:radial-gradient(circle at 80% 10%,rgba(22,119,255,.28),transparent 32%),linear-gradient(135deg,#061426,#071a30)}
+.pageHero h1{font-size:clamp(46px,6vw,78px);max-width:930px}
+.pageHero p{max-width:720px;color:#b7c6d8;font-size:18px;margin-top:24px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.bigNumber{font-size:58px;font-weight:900;color:#d9ebff;line-height:1}
+.list{display:grid;gap:14px}.listItem{padding:20px;border:1px solid #dce4ed;border-radius:14px;background:#fff}
+.listItem strong{display:block;margin-bottom:5px}.listItem p{color:#687b91}
+.tag{display:inline-block;padding:7px 11px;border-radius:999px;background:#eaf3ff;color:#1478ef;font-size:12px;font-weight:800;margin:4px}
+.contactBox{padding:35px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.045)}
+@media(max-width:850px){.split{grid-template-columns:1fr}.pageHero{padding:80px 0 60px}}
+
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap navin"><a class="logo" href="adenx_index.html">Aden<span>X</span></a>
+<button class="menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+<div class="links"><a href="adenx_index.html">Accueil</a><a href="solutions.html">Solutions</a><a href="diagnostic.html">Diagnostic</a><a href="realisations.html">Réalisations</a><a href="a-propos.html" style="color:#fff;font-weight:700">À propos</a><a href="contact.html">Contact</a><a class="btn primary" href="diagnostic.html">Diagnostic gratuit</a></div></div></nav>
+<header class="pageHero"><div class="wrap"><div class="kicker">À propos d'AdenX</div><h1>Rapprocher les entreprises du monde numérique.</h1><p>AdenX transforme les outils digitaux en solutions concrètes pour aider les entreprises à mieux communiquer, attirer des clients et gagner en efficacité.</p></div></header>
+<section class="light"><div class="wrap split"><div class="head"><div class="kicker">Notre vision</div><h2>Le digital n'est pas une décoration.</h2><p>Un outil digital doit répondre à un problème réel : être trouvé, rassurer, vendre, communiquer, organiser ou automatiser.</p></div><div class="card"><div class="kicker">Notre approche</div><h3 style="font-size:28px;margin-bottom:15px">Simple, cohérente, évolutive.</h3><p>Nous ne nous limitons pas à livrer un site, un visuel ou un chatbot. Nous cherchons à comprendre le besoin, construire la bonne réponse et la faire évoluer.</p></div></div></section>
+<section class="dark"><div class="wrap"><div class="head"><div class="kicker">Méthode AdenX</div><h2>Diagnostic → Solution → Évolution</h2></div><div class="method"><div class="step"><div class="num">01</div><h3>Comprendre</h3><p>Observer l'entreprise, ses canaux et ses clients.</p></div><div class="step"><div class="num">02</div><h3>Construire</h3><p>Déployer une solution adaptée au besoin identifié.</p></div><div class="step"><div class="num">03</div><h3>Évoluer</h3><p>Améliorer progressivement selon les besoins et les retours.</p></div></div></div></section>
+<footer><div class="wrap"><div class="foot">
+<div><a class="logo" href="adenx_index.html">Aden<span>X</span></a><p style="margin-top:13px">Des idées. Des solutions. De vrais résultats.</p></div>
+<div><strong>Navigation</strong><a href="solutions.html">Solutions</a><a href="realisations.html">Réalisations</a><a href="a-propos.html">À propos</a></div>
+<div><strong>AdenX</strong><a href="diagnostic.html">Diagnostic gratuit</a><a href="contact.html">Contact</a><p>Cotonou / Calavi, Bénin</p></div>
+</div><div class="copy">© 2026 AdenX. Tous droits réservés.</div></div></footer>
+</body>
+</html>
